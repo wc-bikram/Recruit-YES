@@ -54,7 +54,7 @@ We welcome contributions from the community! Please read our [contributing guide
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
-For questions or feedback, please contact us at support@recruit-yes.com.
+For questions or feedback, please contact us at bikramroy756@gmail.com.
 
 ---
 
