@@ -47,9 +47,6 @@ Recruit-YES is a comprehensive job searching and posting platform built using th
     npm run dev
     ```
 
-## Contributing
-We welcome contributions from the community! Please read our [contributing guidelines](CONTRIBUTING.md) to get started.
-
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
