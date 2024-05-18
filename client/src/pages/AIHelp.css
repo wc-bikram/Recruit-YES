@@ -1,0 +1,56 @@
+/* AIHelp.css */
+
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .message-list {
+    margin-bottom: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .message-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .message-item.user {
+    background-color: #e6f7ff;
+    align-self: flex-end;
+  }
+  
+  .message-item.bot {
+    background-color: #f6ffed;
+    align-self: flex-start;
+  }
+  
+  .message-text {
+    white-space: pre-wrap; /* Ensures text wraps correctly */
+    word-break: break-word; /* Prevents long words from breaking the layout */
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-field {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  
+  .send-button {
+    width: 100px;
+  }
+  
