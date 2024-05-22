@@ -2,26 +2,29 @@ import React, { useState } from "react";
 import DefaultLayout from "../components/DefaultLayout";
 import { Row, Col, Form, Tabs, Input, Button, Select } from "antd";
 import { useDispatch } from "react-redux";
-import { updateUser } from "../redux/actions/userActions";
-import { postJob } from "../redux/actions/jobActions.";
+import { postJob } from "../redux/actions/jobActions";
 const { TextArea } = Input;
 const { TabPane } = Tabs;
 const { Option } = Select;
+
 function PostJob() {
   const [jobInfo, setJobInfo] = useState({});
   const [activeTab, setActiveTab] = useState("0");
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+
   function onFirstFormFinish(values) {
     setJobInfo(values);
     setActiveTab("1");
   }
+
   function onFinalFormFinish(values) {
-      const finalObj = {...jobInfo , ...values};
-      console.log(finalObj)
-      dispatch(postJob(finalObj))
+    const finalObj = { ...jobInfo, ...values };
+    console.log(finalObj);
+    dispatch(postJob(finalObj));
   }
+
   return (
-    <div>
+    <div className="post-job-background"> {/* Add the class here */}
       <DefaultLayout>
         <Tabs defaultActiveKey="0" activeKey={activeTab}>
           <TabPane tab="Job Info" key="0">
@@ -36,7 +39,6 @@ function PostJob() {
                     <Input />
                   </Form.Item>
                 </Col>
-
                 <Col lg={8} sm={24}>
                   <Form.Item
                     name="department"
@@ -46,7 +48,6 @@ function PostJob() {
                     <Input />
                   </Form.Item>
                 </Col>
-
                 <Col lg={8} sm={24}>
                   <Form.Item
                     name="experience"
@@ -56,7 +57,6 @@ function PostJob() {
                     <Input />
                   </Form.Item>
                 </Col>
-
                 <Col lg={8} sm={24}>
                   <Form.Item
                     name="salaryFrom"
@@ -66,7 +66,6 @@ function PostJob() {
                     <Input type="number" />
                   </Form.Item>
                 </Col>
-
                 <Col lg={8} sm={24}>
                   <Form.Item
                     name="salaryTo"
@@ -77,7 +76,6 @@ function PostJob() {
                   </Form.Item>
                 </Col>
               </Row>
-
               <Row gutter={16}>
                 <Col lg={8} sm={24}>
                   <Form.Item
@@ -88,7 +86,6 @@ function PostJob() {
                     <Input />
                   </Form.Item>
                 </Col>
-
                 <Col lg={8} sm={24}>
                   <Form.Item
                     name="minimumQualification"
@@ -102,7 +99,6 @@ function PostJob() {
                     </Select>
                   </Form.Item>
                 </Col>
-
                 <Col lg={24} sm={24}>
                   <Form.Item
                     name="smallDescription"
@@ -112,7 +108,6 @@ function PostJob() {
                     <TextArea rows={3} />
                   </Form.Item>
                 </Col>
-
                 <Col lg={24} sm={24}>
                   <Form.Item
                     name="fullDescription"
@@ -123,12 +118,11 @@ function PostJob() {
                   </Form.Item>
                 </Col>
               </Row>
-
               <Button htmlType="submit">Next</Button>
             </Form>
           </TabPane>
           <TabPane tab="Company Info" key="1">
-            <Form layout='vertical' onFinish={onFinalFormFinish}>
+            <Form layout="vertical" onFinish={onFinalFormFinish}>
               <Row gutter={16}>
                 <Col lg={8} sm={24}>
                   <Form.Item
@@ -138,8 +132,8 @@ function PostJob() {
                   >
                     <Input />
                   </Form.Item>
-                  </Col>
-                  <Col lg={8} sm={24}>
+                </Col>
+                <Col lg={8} sm={24}>
                   <Form.Item
                     name="email"
                     label="Company Email"
@@ -147,9 +141,8 @@ function PostJob() {
                   >
                     <Input />
                   </Form.Item>
-                  </Col>
-
-                  <Col lg={8} sm={24}>
+                </Col>
+                <Col lg={8} sm={24}>
                   <Form.Item
                     name="phoneNumber"
                     label="Phone number"
@@ -157,8 +150,8 @@ function PostJob() {
                   >
                     <Input />
                   </Form.Item>
-                  </Col>
-                  <Col lg={24} sm={24}>
+                </Col>
+                <Col lg={24} sm={24}>
                   <Form.Item
                     name="companyDescription"
                     label="Company Description"
@@ -166,10 +159,9 @@ function PostJob() {
                   >
                     <TextArea rows={3} />
                   </Form.Item>
-                  </Col>
-              
+                </Col>
               </Row>
-              <Button onClick={()=>{setActiveTab("0")}}>Previous</Button>
+              <Button onClick={() => setActiveTab("0")}>Previous</Button>
               <Button htmlType="submit">Post Job</Button>
             </Form>
           </TabPane>

@@ -11,7 +11,7 @@ import Profile from "./pages/Profile";
 import { css } from "@emotion/react";
 import FadeLoader from "react-spinners/FadeLoader";
 import { useDispatch, useSelector } from "react-redux";
-import { getAllJobs } from "./redux/actions/jobActions.";
+import { getAllJobs } from "./redux/actions/jobActions";
 import { useEffect } from "react";
 import Register from "./pages/Register";
 import Login from "./pages/Login";

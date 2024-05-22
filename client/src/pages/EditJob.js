@@ -3,7 +3,7 @@ import DefaultLayout from "../components/DefaultLayout";
 import { Row, Col, Form, Tabs, Input, Button, Select } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { updateUser } from "../redux/actions/userActions";
-import { editJob, postJob } from "../redux/actions/jobActions.";
+import { editJob, postJob } from "../redux/actions/jobActions";
 const { TextArea } = Input;
 const { TabPane } = Tabs;
 const { Option } = Select;

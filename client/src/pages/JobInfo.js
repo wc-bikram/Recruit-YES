@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import DefaultLayout from "../components/DefaultLayout";
-import { applyJob } from "../redux/actions/jobActions.";
+import { applyJob } from "../redux/actions/jobActions";
 
 function JobInfo({ match }) {
   const { jobs } = useSelector((state) => state.jobsReducer);

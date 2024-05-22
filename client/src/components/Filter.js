@@ -9,7 +9,7 @@ import {
   FilterOutlined,
 } from "@ant-design/icons";
 import { useDispatch } from "react-redux";
-import { searchJobs, sortJobs } from "../redux/actions/jobActions.";
+import { searchJobs, sortJobs } from "../redux/actions/jobActions";
 
 const { Search } = Input;
 const {Option} = Select;
